@@ -1,0 +1,330 @@
+﻿/* CSS Custom Properties for easy theming */
+:root {
+    --dark-orchid: #9932cc;
+    --accent-blue: #4682B4;
+    --highlight-bg: #9400d3;
+    --highlight-text: #333;
+    --navbar-link: #fff;
+    --navbar-link-hover: #FAF0E6;
+    --navbar-link-focus: #FFD700;
+    --body-bg: #32174d;
+    --body-text: #202020;
+    --paragraph-text: #BDB76B;
+    --nav-height: 60px;
+    --content-gap: 1rem;
+    --radius-sm: 4px;
+    --radius-lg: 15px;
+    --shadow-soft: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* Accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+    :root { --motion-scale: 0; }
+}
+@media (prefers-contrast: more) {
+    :root {
+        --body-bg: #fff;
+        --body-text: #000;
+        --highlight-bg: #9400d3;
+    }
+}
+
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Base layout and reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--body-bg);
+    color: var(--body-text);
+    text-align: center;
+    padding: 0;
+}
+
+/* Top nav is fixed; ensure content doesn't sit under it and the wrapper fills the remaining viewport */
+nav,
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-green);
+    padding: 0 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* If you use an inner .navbar container, this keeps it centered and constrained */
+nav > .navbar,
+.navbar {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Ensure the main page wrapper starts below the fixed nav and fits the viewport */
+.site-wrapper {
+    position: relative;
+    min-height: calc(100vh - var(--nav-height));
+    padding-top: var(--nav-height); /* prevents overlap with fixed nav */
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-gap);
+}
+
+/* Scrollable area for page content (internal scrolling only) */
+.site-scroll {
+    flex: 1 1 auto;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+    position: relative; /* used for absolute children if any */
+}
+
+/* Helper main */
+main {
+    width: 100%;
+}
+
+/* Reset lists */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Headings */
+h1, h2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1.5em 0;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+
+.highlight {
+    background-color: var(--highlight-bg);
+    color: var(--highlight-text);
+    padding: 10px;
+    border-radius: var(--radius-sm);
+}
+
+/* Paragraphs */
+p {
+    color: var(--paragraph-text);
+    background: #FFFAF0;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    border-radius: var(--radius-sm);
+}
+
+/* Navigation list and links */
+.nav-list {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+   /* Base link styling for nav items (accessibility + hit target) */
+.nav-list a {
+    color: var(--navbar-link);
+    text-decoration: none;
+    padding: 0.45rem 0.65rem;
+    border-radius: 6px;
+    transition: background-color 180ms ease, color 180ms ease, transform 160ms ease;
+    font-weight: 600;
+    display: inline-block;
+}
+.nav-list a:hover {
+    background-color: var(--navbar-link-hover);
+}
+.nav-list a:focus-visible {
+    outline: 2px solid var(--navbar-link-focus);
+    outline-offset: 3px;
+    background-color: var(--navbar-link-hover);
+}
+
+/* Active/current nav */
+.nav-list a[aria-current="page"],
+.nav-list a.active {
+    background-color: rgba(255,255,255,0.12);
+}
+
+/* Images: consolidate responsive rules */
+img,
+.resumeImage,
+.selfimage,
+.KRimage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Profile/self image: single authoritative rule */
+.selfimage {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 50%;
+    box-shadow: var(--shadow-soft);
+    width: 200px;
+    max-width: 90%;
+    height: auto;
+    object-position: center;
+}
+
+/* Smaller screens for selfimage */
+@media (max-width: 480px) {
+    .selfimage {
+        width: 120px;
+        box-shadow: none;
+    }
+}
+
+/* KR image and resume */
+.KRimage { width: 100px; object-position: left; }
+.resumeImage {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Tasks */
+.task { margin: 5px 0; }
+
+/* Responsive Navigation adjustments */
+@media (max-width: 768px) {
+    :root { --nav-height: 72px; }
+
+    nav { padding: 0 0.75rem; }
+
+    nav > .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5em;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+        padding: 1em 0;
+    }
+}
+
+/* Education list */
+.education-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+.education-list li {
+    display: block;
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    padding: 10px;
+    text-align: center;
+    border-radius: var(--radius-sm);
+}
+.education-list li:hover { background-color: #ddd; }
+
+/* Custom scrollbar for the internal scroll area (.site-scroll) */
+/* WebKit browsers */
+.site-scroll::-webkit-scrollbar { width: 12px; height: 12px; }
+.site-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+.site-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-blue), var(--primary-green));
+    border-radius: 8px;
+    border: 3px solid rgba(0,0,0,0.03);
+}
+.site-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #3b7aa0, #00e6e6);
+}
+
+/* Firefox */
+.site-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-blue) rgba(0,0,0,0.06);
+}
+
+/* Skip link styling (visible on keyboard focus) */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: var(--highlight-bg);
+    color: var(--highlight-text);
+    border-radius: 4px;
+    z-index: 1100;
+    text-decoration: none;
+}
+
+/* :has() helper to vertically center when a .selfimage present (good when supported) */
+/* Provide a .center-block fallback in HTML for wider support */
+.site-scroll:has(.selfimage) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Fallback helper class (use in HTML if you need full compatibility):
+   .center-block { display:flex; align-items:center; justify-content:center; min-height:50vh; }
+*/
+
+/* Motion and interaction tuning */
+* {
+    transition-timing-function: cubic-bezier(.2,.9,.2,1);
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+}

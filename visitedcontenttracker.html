@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Visited Pages Tracker</title>
+    <link rel="stylesheet" href="pstyles.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <ul class="nav-list">
+            <li><a href="home.index.html">Home</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="visitedcontenttracker.html">Progress</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Pages You Have Visited</h2>
+
+        <p class="controls">
+            <button id="clearVisited" type="button">Clear visited</button>
+            <span id="visitedSummary" aria-live="polite">Visited: <strong id="visitedCount">0</strong></span>
+        </p>
+
+        <ul class="page-list" role="list">
+            <li role="listitem">
+                <span class="checkbox-style" data-page="home.index.html" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="experience.html" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="education.html" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="documentation.html" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="Documentation Project Plan" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="Why Document Presentation" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="Documention Audit" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="contact.html" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+            <li role="listitem">
+                <span class="checkbox-style" data-page="visitedcontenttracker.html" role="img" aria-hidden="true"></span>
+                <span class="page-label"></span>
+            </li>
+        </ul>
+
+        <noscript>
+            <p>JavaScript is required for automatic tracking. You can still navigate the site normally.</p>
+        </noscript>
+    </main>
+
+    <script>
+        /*
+          Improvements:
+          - Normalizes page names (lowercase, strip extension) so comparisons are consistent.
+          - Stores and reads visited pages from localStorage safely.
+          - Marks items on load and updates visited count.
+          - Listens for internal link clicks to mark pages as visited before navigation.
+          - Adds a Clear button and accessible live region for count updates.
+        */
+        (function () {
+            'use strict';
+
+            const STORAGE_KEY = 'visitedPages';
+
+            const normalize = (s) => (s || '').toString().trim().toLowerCase().replace(/\?.*$/, '').replace(/\#[^/]*$/, '').replace(/\.[^/.]+$/, '');
+
+            function getCurrentPage() {
+                const path = window.location.pathname;
+                const file = path.substring(path.lastIndexOf('/') + 1) || 'home.index.html';
+                return normalize(file);
+            }
+
+            function loadVisited() {
+                try {
+                    return (JSON.parse(localStorage.getItem(STORAGE_KEY)) || []).map(normalize);
+                } catch (e) {
+                    console.warn('Invalid visitedPages in localStorage, resetting.', e);
+                    localStorage.removeItem(STORAGE_KEY);
+                    return [];
+                }
+            }
+
+            function saveVisited(arr) {
+                const unique = Array.from(new Set(arr.map(normalize)));
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(unique));
+            }
+
+            function markListItems(visited) {
+                const boxes = document.querySelectorAll('.checkbox-style');
+                boxes.forEach(box => {
+                    const page = normalize(box.dataset.page);
+                    const isVisited = visited.includes(page);
+                    box.classList.toggle('visited', isVisited);
+                    // Keep it non-interactive but provide an accessible assertion
+                    box.setAttribute('aria-checked', String(isVisited));
+                });
+            }
+
+            function updateCountUI() {
+                const countEl = document.getElementById('visitedCount');
+                if (countEl) countEl.textContent = loadVisited().length;
+            }
+
+            // Initialize
+            const current = getCurrentPage();
+            const visited = loadVisited();
+            if (!visited.includes(current)) {
+                visited.push(current);
+                saveVisited(visited);
+            }
+            markListItems(loadVisited());
+            updateCountUI();
+
+            // Listen for clicks on internal links so we mark them before navigation
+            document.addEventListener('click', function (e) {
+                const anchor = e.target.closest('a[href]');
+                if (!anchor) return;
+                const href = anchor.getAttribute('href');
+                // Only handle same-origin relative links (skip external and anchors)
+                if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#')) return;
+                const name = normalize(href);
+                const arr = loadVisited();
+                if (!arr.includes(name)) {
+                    arr.push(name);
+                    saveVisited(arr);
+                    // optimistic UI update (may navigate away)
+                    markListItems(arr);
+                    updateCountUI();
+                }
+            }, true);
+
+            // Clear button
+            const clearBtn = document.getElementById('clearVisited');
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function () {
+                    localStorage.removeItem(STORAGE_KEY);
+                    markListItems([]);
+                    updateCountUI();
+                    // Announce action to screen readers via aria-live in visitedSummary
+                    const summary = document.getElementById('visitedSummary');
+                    if (summary) summary.textContent = 'Visited: 0';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
+
+

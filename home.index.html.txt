@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="pstyles.css" href="JavaScript1.js">
+</head>
+<body>
+    <header>
+        <h1>Kaela Ramey's</h1>
+        <h2>Portfolio</h2>
+        <nav class="navbar" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Documents">Documents</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p class="intro">
+            My name is Kaela Ramey. I am a Michigan native and I am working to complete my Bachelor's in Information Assurance and Cyber Defense. I found my niche in the security sector with a love for documentation.
+        </p>
+        <p class="highlight">How much content have you viewed?</p>
+    </main>
+</body>
+</html>
