@@ -202,7 +202,7 @@ p {
     nav { padding: 0 0.75rem; }
 
     nav > .navbar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: stretch;
         gap: 0.5rem;
     }
