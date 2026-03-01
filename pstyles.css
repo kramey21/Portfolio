@@ -8,10 +8,10 @@
     --navbar-link-hover: #FAF0E6;
     --navbar-link-focus: #FFD700;
     --body-bg: #100c08;
-    --body-text: #004242;
+    --body-text: #fffafa;
     --paragraph-text: text-align: left;
     --nav-height: 60px;
-    --content-gap: 1rem;  
+    --content-gap: 1rem;
 }
 
 /* Accessibility preferences */
@@ -26,12 +26,7 @@
     }
 }
 
-/* Universal box-sizing */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 
 /* Base layout and reset */
 html, body {
@@ -46,7 +41,14 @@ body {
     background: var(--body-bg);
     color: var(--body-text);
     text-align: center;
-    padding: 0;
+    padding: 40px;
+    margin: 40px;  
+}
+
+title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
 }
 
 /* Top nav is fixed; ensure content doesn't sit under it and the wrapper fills the remaining viewport */
@@ -147,6 +149,7 @@ p {
     transition: background-color 180ms ease, color 180ms ease, transform 160ms ease;
     font-weight: 600;
     display: inline-block;
+    z-index: 1;
 }
 .nav-list a:hover {
     background-color: var(--navbar-link-hover);
@@ -163,12 +166,7 @@ p {
     background-color: rgba(255,255,255,0.12);
 }
 
-/* Container to hold both images */
-.image-container {
-    position: relative; /* Needed for absolute positioning inside */
-    display: inline-block;
 
-}
 /* Base (background) image */
 .selfimage {
     display: block;
@@ -305,12 +303,14 @@ p {
 
 /* course card color variants */
 .card.course-card {
-  --card-bg: #0d6efd; /* fallback default (Bootstrap primary) */
-  --card-foreground: #ffffff;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--card-bg) 85%, #0000) 0%, var(--card-bg) 100%);
-  color: var(--card-foreground);
-  border: none;
-  transition: transform .12s ease, box-shadow .12s ease;
+    --card-bg: transparent; /* fallback default (Bootstrap primary) */
+    --card-foreground: #ffffff;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--card-bg) 85%, #0000) 0%, var(--card-bg) 100%);
+    color: var(--card-foreground);
+    border: none;
+    transition: transform .12s ease, box-shadow .12s ease;
+    box-shadow: 0 0 10px #32174d, 0 0 10px #fffafa, 0 0 15px #32174d, 0 0 20px #32174d, 0 0 50px #fffafa, 0 0 30px #a2006d, 0 0 70px #32174d;
+    background: transparent;
 }
 
 /* keep card body spacing and readable weight */
