@@ -197,20 +197,23 @@ p {
 
 /* Responsive Navigation adjustments */
 @media (max-width: 768px) {
-    :root { --nav-height: 72px; }
+    :root {
+        --nav-height: 72px;
+    }
+}
 
-    nav { padding: 0 0.75rem; }
-
-    nav > .navbar {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
+    nav {
+        display: none; /* Hide navigation menu on mobile */
     }
 
-    .nav-list {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5em;
+    .mobile-menu {
+        display: block; /* Show mobile menu button */
+    }
+    .panel {
+        max-width: 1200px;
+        margin: 15px auto;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
     h1, h2 {
