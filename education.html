@@ -6,74 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Education</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="pstyles.css">
-    <link rel="variables.css" href="variables.css">
     <style>
-        #grid {
-            background-color: #32174d;
+        /* Center page content and add a subtle panel look */
+        .panel {
+            max-width: 1200px;
+            margin: 24px auto;
             padding: 20px;
-            display: grid;
-            place-items: center;
-            place-content: center;
-            grid-column-gap: 20px;
-            grid-row-gap: 10px;
-            grid-template-columns: 200px 200px 200px 200px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
         }
-
-        .grid-item {
-            background-color: white;
-            font-size: 15px;
-            padding: 30px;
-            text-align: center;
-        }
+       
     </style>
 </head>
 
 <body>
-    <header>        
+    <header>
         <nav class="navbar" aria-label="Main navigation">
-            <ul class="nav-list">
-                <li><a href="home.index.html">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="documentation.html">Documentation</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="visitedcontenttracker.html">Progress</a></li>
+            <ul class="nav-list" role="menubar">
+                <li role="none"><a role="menuitem" href="home.index.html">Home</a></li>
+                <li role="none"><a role="menuitem" href="experience.html">Experience</a></li>
+                <li role="none"><a role="menuitem" href="education.html">Education</a></li>
+                <li role="none"><a role="menuitem" href="documentation.html">Documentation</a></li>
+                <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+                <li role="none"><a role="menuitem" href="visitedcontenttracker.html">Progress</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Learning</h1>    
-    <h3 class="intro">
-        EDUCTION</h3>
-    <p>
-        Jackson Colloge - General Courses, 2024-Present
 
-        Eastern Michigan University – Bachelor of Science in Information Assurance and Cyber Defense,
-        Expected Graduation May 2027
+    <main class="panel">
+        <h1 class="mb-3">Education</h1>
 
-        Jackson High School - High School Diploma, Graduated May 2012
-    </p>
-        Relevant Coursework:
+        <section class="mb-4">
+            <h2 class="h5">Institutions</h2>
+            <p>
+                Jackson College — General Courses, 2024–Present<br />
+                Eastern Michigan University — B.S. in Information Assurance and Cyber Defense (expected May 2027)<br />
+                Jackson High School — High School Diploma, Graduated May 2012
+            </p>
+            <p>
+                Certifications: CompTIA A+ (Jul 19, 2021 – Jul 19, 2024), CompTIA Fundamentals (Jul 2014)
+            </p>
+        </section>
 
-        <div id="grid">            
-                <div class="grid-item"> Task Automation for IT Admins</div>
-                <div class="grid-item"> Network Security</div>
-                <div class="grid-item"> Cyber Law and Compliance</div>
-                <div class="grid-item"> Risk-Vulnerability Analysis</div>
-                <div class="grid-item"> Managing Security Projects</div>
-                <div class="grid-item"> Policy Development in Information Assurance</div>
-                <div class="grid-item"> Ethical Hacking and Offensive Security</div>
-                <div class="grid-item">  Digital Forensics I</div>
-                <div class="grid-item"> Network Forensics and Analytics</div>
-                <div class="grid-item"> Systems Analysis and Design</div>
-                <div class="grid-item"> Database Management Systems</div>
-                <div class="grid-item"> Databade and Web Application Security</div>
-                <div class="grid-item"> Cyber Crime Investigation</div>
-                <div class="grid-item"> Advanced Operating Systems and Security and Administration</div>            
-        </div>
-        <p>
-            CompTIA A+ Certified, July 19, 2021 - July 19, 2024
-            <br/>CompTIA Fundamentals, July 2014
-        </p>    
-    </body>
+        <section aria-labelledby="coursework-heading">
+            <h2 id="coursework-heading" class="h5 mb-3">Relevant Coursework</h2>
+
+            <!-- Responsive 1 column on xs, 2 on sm, 3 on md+; items wrap into varying rows automatically -->
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Task Automation for IT Admins</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Network Security</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Cyber Law and Compliance</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Risk &amp; Vulnerability Analysis</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Managing Security Projects</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Policy Development in Information Assurance</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Ethical Hacking &amp; Offensive Security</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Digital Forensics I</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Network Forensics &amp; Analytics</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Systems Analysis &amp; Design</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Database Management Systems</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Database &amp; Web Application Security</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Cyber Crime Investigation</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card variant-indigo">
+                            <div class="card-body">Advanced Operating Systems, Security &amp; Administration</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+</body>
+
 </html>
