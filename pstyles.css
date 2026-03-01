@@ -208,7 +208,7 @@ p {
     }
 
     .nav-list {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-end;
         gap: 0.5em;
     }
