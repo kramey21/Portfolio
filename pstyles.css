@@ -14,20 +14,22 @@
     --content-gap: 1rem;
 }
 
-/* Accessibility preferences */
-@media (prefers-reduced-motion: reduce) {
-    :root { --motion-scale: 0; }
-}
-@media (prefers-contrast: more) {
-    :root {
-        --body-bg: #fff;
-        --body-text: #000;
-        --highlight-bg: #9400d3;
+    /* Accessibility preferences */
+    @media (prefers-reduced-motion: reduce) {
+        :root {
+            --motion-scale: 0;
+        }
     }
-}
 
-/* Base layout and reset */
-html, body {
+    @media (prefers-contrast: more) {
+        :root {
+            --body-bg: #fff;
+            --body-text: #000;
+            --highlight-bg: #9400d3;
+        }
+    }
+    /* Base layout and reset */
+    html, body {
     height: 100%;
     margin: 0;
     overflow: auto;
@@ -48,6 +50,7 @@ title {
     font-weight: 700;
     margin: 1rem 0;
 }
+
 
 /* Top nav is fixed; ensure content doesn't sit under it and the wrapper fills the remaining viewport */
 nav,
@@ -130,7 +133,12 @@ p {
     padding: 0.5em 1em;
     border-radius: var(--radius-sm);
 }
-
+iframe {
+    flex: 1;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
 /* Navigation list and links */
 .nav-list {
     display: flex;
@@ -217,20 +225,16 @@ p {
     }
     .panel {
         max-width: 750px;
-            margin: 15px auto;
-            padding: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        margin: 5px auto;
+        padding: 5px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
     h1, h2 {
         font-size: 1.5rem;
         padding: 1em 0;
     }
-    iframe {
-        width =748px; 
-        height=50px;          
-        border-radius: 15px;
-    }
+    
 }
 
 /* Custom scrollbar for the internal scroll area (.site-scroll) */
