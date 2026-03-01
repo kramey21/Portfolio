@@ -26,8 +26,6 @@
     }
 }
 
-
-
 /* Base layout and reset */
 html, body {
     height: 100%;
@@ -166,13 +164,13 @@ p {
     background-color: rgba(255,255,255,0.12);
 }
 
-
 /* Base (background) image */
 .selfimage {
     display: block;
     width: 300px; /* Adjust as needed */
     height: auto;
     margin: 20px;
+    border: ridge 4px #f8f8ff;
 }
 
 /* Overlay image */
@@ -192,16 +190,6 @@ p {
         width: 120px;
         box-shadow: none;
     }
-}
-
-.resumeImage {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border: 1px solid #000;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
 }
 
 /* Tasks */
