@@ -9,8 +9,7 @@
     --navbar-link-focus: #FFD700;
     --body-bg: #100c08;
     --body-text: #fffafa;
-    --paragraph-text: text-align: left;
-    
+    --paragraph-text: text-align: left;    
     --content-gap: 1rem;
 }
 
@@ -56,7 +55,7 @@ title {
 nav,
 
 nav.navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -68,35 +67,6 @@ nav.navbar {
     padding: 0 1rem;
     z-index: 1000;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* If you use an inner .navbar container, this keeps it centered and constrained */
-nav > .navbar,
-.navbar {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    padding: 0;
-}
-
-/* Ensure the main page wrapper starts below the fixed nav and fits the viewport */
-.site-wrapper {
-    position: relative;
-    min-height: calc(100vh - var(--nav-height));
-    padding-top: var(--nav-height); /* prevents overlap with fixed nav */
-    display: flex;
-    flex-direction: column;
-    gap: var(--content-gap);
-}
-
-
-/* Helper main */
-main {
-    width: 100%;
 }
 
 /* Reset lists */
@@ -126,12 +96,7 @@ p {
     padding: 0.5em 1em;
     border-radius: var(--radius-sm);
 }
-iframe {
-    flex: 1;
-    border: none;
-    width: 100%;
-    height: 100%;
-}
+
 /* Navigation list and links */
 .nav-list {
     display: flex;
