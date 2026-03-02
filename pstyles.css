@@ -79,13 +79,6 @@ ul {
 h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
 h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
 
-.highlight {
-    background-color: var(--highlight-bg);
-    color: var(--highlight-text);
-    padding: 10px;
-    border-radius: var(--radius-sm);
-}
-
 /* Paragraphs */
 p {
     color: var(--paragraph-text);
@@ -147,7 +140,7 @@ p {
     width: 70px; /* Size of overlay image */
     height: auto;
     z-index: 2; /* Ensure it appears above the background */
-    pointer-events: none; /* Optional: makes overlay non-clickable */
+    pointer-events: painted;
 }
 
 /* Smaller screens for selfimage */
@@ -161,14 +154,14 @@ p {
 
 
 /* Responsive Navigation adjustments */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     :root { --nav-height: 72px; }
 
     
     .panel {
-        max-width: 764px;
-        margin: 5px auto;
-        padding: 5px;
+        max-width: 768px;
+        margin: 2px auto;
+        padding: 2px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
