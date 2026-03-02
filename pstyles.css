@@ -42,7 +42,7 @@ body {
     color: var(--body-text);
     text-align: center;
     padding: 40px;
-    margin: 40px;  
+    margin: 40px;
 }
 
 title {
@@ -92,14 +92,6 @@ nav > .navbar,
     gap: var(--content-gap);
 }
 
-/* Scrollable area for page content (internal scrolling only) */
-.site-scroll {
-    flex: 1 1 auto;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 1rem;
-    position: relative; /* used for absolute children if any */
-}
 
 /* Helper main */
 main {
@@ -235,64 +227,6 @@ iframe {
         padding: 1em 0;
     }
     
-}
-
-/* Custom scrollbar for the internal scroll area (.site-scroll) */
-/* WebKit browsers */
-.site-scroll::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-.site-scroll::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-}
-.site-scroll::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--accent-blue), var(--primary-green));
-    border-radius: 8px;
-    border: 3px solid rgba(0,0,0,0.03);
-}
-.site-scroll::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #3b7aa0, #00e6e6);
-}
-
-/* Firefox */
-.site-scroll {
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-blue) rgba(0,0,0,0.06);
-}
-
-/* Skip link styling (visible on keyboard focus) */
-.skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-.skip-link:focus {
-    left: 1rem;
-    top: 1rem;
-    width: auto;
-    height: auto;
-    padding: 8px 12px;
-    background: var(--highlight-bg);
-    color: var(--highlight-text);
-    border-radius: 4px;
-    z-index: 1100;
-    text-decoration: none;
-}
-
-/* :has() helper to vertically center when a .selfimage present (good when supported) */
-/* Provide a .center-block fallback in HTML for wider support */
-.site-scroll:has(.selfimage) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
 }
 
 /* Fallback helper class (use in HTML if you need full compatibility):
