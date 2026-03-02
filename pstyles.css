@@ -192,31 +192,14 @@ iframe {
     }
 }
 
-/* Tasks */
-.task { margin: 5px 0; }
 
 /* Responsive Navigation adjustments */
 @media (max-width: 768px) {
     :root { --nav-height: 72px; }
 
-    nav { padding: 0 0.75rem; }
-
-    nav > .navbar {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.4rem;
-    }
-
-    .nav-list {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.4em;
-    }
-    nav .icon {
-        display: none;
-    }
+    
     .panel {
-        max-width: 750px;
+        max-width: 764px;
         margin: 5px auto;
         padding: 5px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -228,7 +211,25 @@ iframe {
     }
     
 }
+@media screen and (max-width: 600px) {
+    .navbar a, .dropdown {
+        display: none;
+    }
 
+    .icon {
+        display: block;
+    }
+
+    .navbar.responsive a,
+    .navbar.responsive .dropdown {
+        display: block;
+        float: none;
+    }
+
+    .navbar.responsive .dropdown-content {
+        position: relative;
+    }
+}
 /* Fallback helper class (use in HTML if you need full compatibility):
    .center-block { display:flex; align-items:center; justify-content:center; min-height:50vh; }
 */
