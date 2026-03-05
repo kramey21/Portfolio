@@ -156,21 +156,21 @@ p {
 /* Responsive Navigation adjustments */
 @media (max-width: 790px) {
     :root { --nav-height: 72px; }
-        
+
     .panel {
-        max-width: 780px;
+        max-width: 786px;
+        margin: 2px auto;
+        padding: 2px;
     }
 
     h1, h2 {
         font-size: 1.5rem;
         padding: 1em 0;
-    }            
+    }    
+    iframe {
+        width: 100%
+    }
 }
-
-
-/* Fallback helper class (use in HTML if you need full compatibility):
-   .center-block { display:flex; align-items:center; justify-content:center; min-height:50vh; }
-*/
 
 /* Motion and interaction tuning */
 * {

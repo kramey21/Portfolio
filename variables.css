@@ -51,8 +51,7 @@ h1, h2 {
 }
 
 iframe.enlarged {
-    width ="1000";
-    height ="300";
-    style ="border:2px solid black; border-radius: 15px;"
+    
+    height: 900px;
 }
 /*# sourceMappingURL=variables.css.map */

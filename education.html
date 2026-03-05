@@ -15,7 +15,7 @@
             margin: 15px auto;
             padding: 15px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        }       
+        }
     </style>
 </head>
 
@@ -25,6 +25,7 @@
             <ul class="nav-list">
                 <li><a href="home.index.html" aria-current="page">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
                 <li><a href="documentation.html">Documentation</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="visitedcontenttracker.html">Progress</a></li>
@@ -58,6 +59,7 @@
                     <div class="col">
                         <div class="card h-100 course-card variant-indigo">
                             <div class="card-body">Task Automation for IT Admins</div>
+                            
                         </div>
                     </div>
                     <div class="col">
@@ -128,9 +130,89 @@
                 </div>
             </div>
         </section>
+        <div class="container py-5">
+            <h2 class="mb-4 text-center">User Session Activity Tracker</h2>
+
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-center gap-3 mb-4">
+                <button id="startBtn" class="btn btn-success">Start Session</button>
+                <button id="endBtn" class="btn btn-danger" disabled>End Session</button>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">Activity Log</div>
+                <div class="card-body p-0">
+                    <table class="table table-striped table-hover mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activityTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            const startBtn = document.getElementById('startBtn');
+            const endBtn = document.getElementById('endBtn');
+            const activityTable = document.getElementById('activityTable');
+
+            let currentSession = null;
+            let activities = JSON.parse(localStorage.getItem('docviews')) || [];
+
+            // Render table from stored data
+            function renderTable() {
+                activityTable.innerHTML = '';
+                activities.forEach((act, index) => {
+                    const row = `<tr>
+                                        <td>${index + 1}</td>
+                                        <td>${act.start}</td>
+                                        <td>${act.end || '-'}</td>
+                                        <td>${act.duration || '-'}</td>
+                                    </tr>`;
+                    activityTable.innerHTML += row;
+                });
+            }
+
+            // Start session
+            startBtn.addEventListener('click', () => {
+                currentSession = { start: new Date().toLocaleString(), end: null, duration: null };
+                startBtn.disabled = true;
+                endBtn.disabled = false;
+            });
+
+            // End session
+            endBtn.addEventListener('click', () => {
+                if (!currentSession) return;
+
+                const endTime = new Date();
+                currentSession.end = endTime.toLocaleString();
+
+                // Calculate duration in minutes/seconds
+                const startTime = new Date(currentSession.start);
+                const diffMs = endTime - startTime;
+                const minutes = Math.floor(diffMs / 60000);
+                const seconds = Math.floor((diffMs % 60000) / 1000);
+                currentSession.duration = `${minutes}m ${seconds}s`;
+
+                activities.push(currentSession);
+                localStorage.setItem('activities', JSON.stringify(activities));
+
+                currentSession = null;
+                startBtn.disabled = false;
+                endBtn.disabled = true;
+                renderTable();
+            });
+
+            // Initial render
+            renderTable();
+        </script>
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    
 </body>
-
 </html>
