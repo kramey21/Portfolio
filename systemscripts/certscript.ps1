@@ -1,0 +1,1 @@
+﻿Get-certificate -Template 'Workstation-Authentication' -CertStoreLocation "Cert:\LocalMachine\My" -Verbose | fl * | Out-File C:\CertEnroll.log"

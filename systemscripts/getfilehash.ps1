@@ -1,0 +1,1 @@
+﻿Get-FileHash F:\accessresults\*.txt > F:\IncidentResponseTools\BrimorLabs\LiveResponseCollection-Cedarpelta-Folder\Windows_Live_Response\memdumpfilehash.txt

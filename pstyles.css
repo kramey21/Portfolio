@@ -19,7 +19,6 @@
             --motion-scale: 0;
         }
     }
-
     @media (prefers-contrast: more) {
         :root {
             --body-bg: #fff;
@@ -27,9 +26,11 @@
             --highlight-bg: #9400d3;
         }
     }
+
     /* Base layout and reset */
     html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     overflow: auto;
     scroll-behavior: smooth;
@@ -49,7 +50,6 @@ title {
     font-weight: 700;
     margin: 1rem 0;
 }
-
 
 /* Top nav is fixed; ensure content doesn't sit under it and the wrapper fills the remaining viewport */
 nav,
@@ -122,7 +122,16 @@ p {
 .nav-list a.active {
     background-color: rgba(255,255,255,0.12);
 }
-
+.nav-toggle {
+    display: none;
+    background: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
 /* Base (background) image */
 .selfimage {
     display: block;
@@ -149,26 +158,35 @@ p {
         width: 120px;
         box-shadow: none;
     }
+    
 }
 
-
-
 /* Responsive Navigation adjustments */
-@media (max-width: 790px) {
-    :root { --nav-height: 72px; }
-
-    .panel {
-        max-width: 786px;
-        margin: 2px auto;
-        padding: 2px;
+@media screen and (max-width: 790px) {
+    :root {
+        --nav-height: 72px;
     }
+
 
     h1, h2 {
         font-size: 1.5rem;
         padding: 1em 0;
-    }    
+    }
+
     iframe {
         width: 100%
+    }
+
+    .nav {
+        display: none; /* Hide list by default */
+    }
+
+    .nav.show {
+        display: block; /* Show when toggled */
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button */
     }
 }
 
