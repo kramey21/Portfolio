@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="pstyles.css">
     <style>
-        /* Center page content and add a subtle panel look */
         .panel {
             max-width: 1200px;
             margin: 10px auto;
@@ -63,15 +62,15 @@
             <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-3">
                 <div class="col">
                     <div class="card h-100 course-card variant-indigo">
-                        <div class="card-body">
+                        <div class="card-body" style="position:relative; display:inline-block;">
                             <h3>Documentation Project Plan</h3>
                             <iframe src="DocumentationProjectPlan.pdf"
                                     width="1000"
                                     height="300"
-                                    style="border:2px solid black; border-radius: 15px;"
+                                    style="border:2px solid black; border-radius: 15px"
                                     title="Project Plan">
-                            </iframe>
-                            <a href="DocumentationProjectPlan.pdf" class="btn" role="button" data-bs-toggle="button" onload="linkCounter()">Open Documentation Project Plan</a>
+                            </iframe> 
+                            <a href="DocumentationProjectPlan.pdf" class="btn" role="button" data-bs-toggle="button">Open Documentation Project Plan</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +84,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Why Document">
                             </iframe>
-                            <a href="WhyDocument.pdf" class="btn" role="button" data-bs-toggle="button" onload="linkCounter()">Open Why Document Presentation</a>
+                            <a href="WhyDocument.pdf" class="btn" role="button" data-bs-toggle="button">Open Why Document Presentation</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +98,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Documentation Audit.pdf">
                             </iframe>
-                            <a href="Documentation Audit.pdf" class="btn" role="button" data-bs-toggle="button" onload="linkCounter()">Open Documentation Audit</a>
+                            <a href="Documentation Audit.pdf" class="btn" role="button" data-bs-toggle="button">Open Documentation Audit</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +112,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Documentation Strategy.pdf">
                             </iframe>
-                            <a href="Documentation Strategy.pdf" class="btn" role="button" data-bs-toggle="button" onload="linkCounter()">Open Documentation Strategy</a>
+                            <a href="Documentation Strategy.pdf" class="btn" role="button" data-bs-toggle="button">Open Documentation Strategy</a>
                         </div>
                     </div>
                 </div>
@@ -127,36 +126,10 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Why Document">
                             </iframe>
-                            <a href="Documentation Playbook.pdf" onload="linkCounter()" class="btn" role="button" data-bs-toggle="button">Open Documentation Playbook</a>
+                            <a href="Documentation Playbook.pdf" class="btn" role="button" data-bs-toggle="button">Open Documentation Playbook</a>
                         </div>
                     </div>
-                </div>
-                <script>
-(function() {
-    let startTime = Date.now();
-    let linkClickCount = 0;
-
-    // Track link clicks
-    document.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function(event) {
-            linkClickCount++;
-            console.log(`Link clicked: ${this.href}`);
-            console.log(`Total link clicks: ${linkClickCount}`);
-            // Example: send click data to server
-            // fetch('/track-click', { method: 'POST', body: JSON.stringify({ url: this.href }) });
-        });
-    });
-
-    // Track engagement time when user leaves
-    window.addEventListener("beforeunload", function() {
-        let timeSpent = Math.round((Date.now() - startTime) / 1000); // seconds
-        console.log(`Time spent on page: ${timeSpent} seconds`);
-        console.log(`Total link clicks: ${linkClickCount}`);
-        // Example: send engagement data to server
-        // navigator.sendBeacon('/track-engagement', JSON.stringify({ timeSpent, linkClickCount }));
-    });
-})();
-                </script>
+                </div>                
             </div>
         </div>
     </main>

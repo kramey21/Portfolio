@@ -72,7 +72,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="certscript.ps1">
                             </iframe>
-                            <a href="systemscripts\certscript.ps1" class="btn" role="button" data-bs-toggle="button" onload="linkCounter()">Open Web Cert Script</a>
+                            <a href="systemscripts\certscript.ps1" class="btn" role="button" data-bs-toggle="button">Open Web Cert Script</a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="File Hash">
                             </iframe>
-                            <a href="systemscripts\getfilehash.ps1" class="btn" role="button" data-bs-toggle="button" onload="linkCounter()">Open File Hash Script</a>
+                            <a href="systemscripts\getfilehash.ps1" class="btn" role="button" data-bs-toggle="button">Open File Hash Script</a>
                         </div>
                     </div>
                 </div>
@@ -100,34 +100,11 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Network Status Script">
                             </iframe>
-                            <a href="systemscripts\systemdetailsscript.ps1" class="btn" role="button" data-bs-toggle="button" onload="linkCounter()">Open Network Status Script</a>
+                            <a href="systemscripts\systemdetailsscript.ps1" class="btn" role="button" data-bs-toggle="button">Open Network Status Script</a>
                         </div>
                     </div>
                 </div>                               
-                <script>(function() {
-    let startTime = Date.now();
-    let linkClickCount = 0;
-
-    // Track link clicks
-    document.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function(event) {
-            linkClickCount++;
-            console.log(`Link clicked: ${this.href}`);
-            console.log(`Total link clicks: ${linkClickCount}`);
-            // Example: send click data to server
-            // fetch('/track-click', { method: 'POST', body: JSON.stringify({ url: this.href }) });
-        });
-    });
-
-    // Track engagement time when user leaves
-    window.addEventListener("beforeunload", function() {
-        let timeSpent = Math.round((Date.now() - startTime) / 1000); // seconds
-        console.log(`Time spent on page: ${timeSpent} seconds`);
-        console.log(`Total link clicks: ${linkClickCount}`);
-        // Example: send engagement data to server
-        // navigator.sendBeacon('/track-engagement', JSON.stringify({ timeSpent, linkClickCount }));
-    });
-})();</script>
+               
             </div>
         </div>
     </main>

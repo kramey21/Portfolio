@@ -148,7 +148,7 @@ p {
     left: 20px; /* Distance from left of container */
     width: 70px; /* Size of overlay image */
     height: auto;
-    z-index: 2; /* Ensure it appears above the background */
+    z-index: 1; /* Ensure it appears above the background */
     pointer-events: painted;
 }
 
@@ -162,7 +162,7 @@ p {
 }
 
 /* Responsive Navigation adjustments */
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 700px) {
     :root {
         --nav-height: 72px;
     }
