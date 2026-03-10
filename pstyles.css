@@ -4,9 +4,6 @@
     --accent-blue: #4682B4;
     --highlight-bg: #9400d3;
     --highlight-text: #333;
-    --navbar-link: #fff;
-    --navbar-link-hover: #FAF0E6;
-    --navbar-link-focus: #FFD700;
     --body-bg: #100c08;
     --body-text: #fffafa;
     --paragraph-text: text-align: left;    
@@ -51,24 +48,6 @@ title {
     margin: 1rem 0;
 }
 
-/* Top nav is fixed; ensure content doesn't sit under it and the wrapper fills the remaining viewport */
-nav,
-
-nav.navbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--nav-height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-green);
-    padding: 0 1rem;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
 /* Reset lists */
 ul {
     margin: 0;
@@ -87,51 +66,59 @@ p {
     line-height: 1.7;
     margin: 1em 0;
     padding: 0.5em 1em;
-    border-radius: var(--radius-sm);
+    border-radius: 15px;
 }
 
-/* Navigation list and links */
-.nav-list {
-    display: flex;
-    gap: 1em;
-    align-items: center;
+/*Navigation Menu*/
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: inherit;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border-radius: 15px;
+}
+ul.sidenav li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 15px;
 }
 
-   /* Base link styling for nav items (accessibility + hit target) */
-.nav-list a {
-    color: var(--navbar-link);
-    text-decoration: none;
-    padding: 0.45rem 0.65rem;
-    border-radius: 6px;
-    transition: background-color 180ms ease, color 180ms ease, transform 160ms ease;
-    font-weight: 600;
-    display: block;
-    z-index: 1;
-}
-.nav-list a:hover {
-    background-color: var(--navbar-link-hover);
-}
-.nav-list a:focus-visible {
-    outline: 2px solid var(--navbar-link-focus);
-    outline-offset: 3px;
-    background-color: var(--navbar-link-hover);
-}
+    ul.sidenav li a.active {
+        background-color: #e6e6fa;
+        color: white;
+    }
 
-/* Active/current nav */
-.nav-list a[aria-current="page"],
-.nav-list a.active {
-    background-color: rgba(255,255,255,0.12);
+    ul.sidenav li a:hover:not(.active) {
+        background-color: #bf94e4;
+        color: white;
+    }
+
+div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
 }
-.nav-toggle {
-    display: none;
-    background: #333;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
+@media screen and (max-width: 900px) {
+  ul.sidenav {
     width: 100%;
-    text-align: left;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  
+  div.content {margin-left: 0;}
 }
+
 /* Base (background) image */
 .selfimage {
     display: block;
@@ -168,27 +155,20 @@ p {
     :root {
         --nav-height: 72px;
     }
-
-
     h1, h2 {
         font-size: 1.5rem;
         padding: 1em 0;
     }
-
     iframe {
         width: 100%
-    }
+    }  
+}
 
-    .nav {
-        display: none; /* Hide list by default */
-    }
 
-    .nav.show {
-        display: block; /* Show when toggled */
-    }
-
-    .nav-toggle {
-        display: block; /* Show toggle button */
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
     }
 }
 

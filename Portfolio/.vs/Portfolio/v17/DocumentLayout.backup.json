@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\kaela\\Portfolio\\Portfolio\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\pstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\lab.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\scripts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\visitedcontenttracker.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\home.index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\experience.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\pstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\visitedcontenttracker.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\education.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
@@ -21,13 +33,7 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\documentation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\variables.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\JavaScript1.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kaela\\Portfolio\\variables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
@@ -43,7 +49,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,46 +57,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "scripts.html",
+              "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\scripts.html",
+              "RelativeDocumentMoniker": "..\\scripts.html",
+              "ToolTip": "C:\\Users\\kaela\\Portfolio\\scripts.html",
+              "RelativeToolTip": "..\\scripts.html",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-10T16:55:58.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "lab.html",
+              "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\lab.html",
+              "RelativeDocumentMoniker": "..\\lab.html",
+              "ToolTip": "C:\\Users\\kaela\\Portfolio\\lab.html",
+              "RelativeToolTip": "..\\lab.html",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-10T16:55:57.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "projects.html",
+              "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\projects.html",
+              "RelativeDocumentMoniker": "..\\projects.html",
+              "ToolTip": "C:\\Users\\kaela\\Portfolio\\projects.html",
+              "RelativeToolTip": "..\\projects.html",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-10T02:00:06.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "documentation.html",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\documentation.html",
               "RelativeDocumentMoniker": "..\\documentation.html",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\documentation.html",
               "RelativeToolTip": "..\\documentation.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-01T21:11:01.737Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "JavaScript1.js",
-              "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\JavaScript1.js",
-              "RelativeDocumentMoniker": "..\\JavaScript1.js",
-              "ToolTip": "C:\\Users\\kaela\\Portfolio\\JavaScript1.js",
-              "RelativeToolTip": "..\\JavaScript1.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-03-01T21:08:23.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "visitedcontenttracker.html",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\visitedcontenttracker.html",
               "RelativeDocumentMoniker": "..\\visitedcontenttracker.html",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\visitedcontenttracker.html",
               "RelativeToolTip": "..\\visitedcontenttracker.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAYAAADWAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-01T20:52:39.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "variables.scss",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\variables.scss",
               "RelativeDocumentMoniker": "..\\variables.scss",
@@ -98,12 +130,11 @@
               "RelativeToolTip": "..\\variables.scss",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2026-03-01T20:52:39.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T20:52:39.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "variables.css.map",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\variables.css.map",
               "RelativeDocumentMoniker": "..\\variables.css.map",
@@ -111,83 +142,82 @@
               "RelativeToolTip": "..\\variables.css.map",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-01T20:52:38.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-01T20:52:38.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "variables.css",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\variables.css",
               "RelativeDocumentMoniker": "..\\variables.css",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\variables.css",
               "RelativeToolTip": "..\\variables.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-03-01T20:52:38.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "pstyles.css",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\pstyles.css",
               "RelativeDocumentMoniker": "..\\pstyles.css",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\pstyles.css",
               "RelativeToolTip": "..\\pstyles.css",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAAAM0AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-03-01T20:52:38.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "home.index.html",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\home.index.html",
               "RelativeDocumentMoniker": "..\\home.index.html",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\home.index.html",
               "RelativeToolTip": "..\\home.index.html",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-01T20:52:38.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "experience.html",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\experience.html",
               "RelativeDocumentMoniker": "..\\experience.html",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\experience.html",
               "RelativeToolTip": "..\\experience.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-01T20:52:38.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "education.html",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\education.html",
               "RelativeDocumentMoniker": "..\\education.html",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\education.html",
               "RelativeToolTip": "..\\education.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-01T20:52:35.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "contact.html",
               "DocumentMoniker": "C:\\Users\\kaela\\Portfolio\\contact.html",
               "RelativeDocumentMoniker": "..\\contact.html",
               "ToolTip": "C:\\Users\\kaela\\Portfolio\\contact.html",
               "RelativeToolTip": "..\\contact.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAYAAADWAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-01T20:52:34.545Z",
               "EditorCaption": ""

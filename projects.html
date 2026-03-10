@@ -27,13 +27,10 @@
             font-size: 80px;
             margin-bottom: 20px;
         }
-        .stretched-link {
-            border-top-color: white;
-        }
-        .btn.btn-primary.stretched-link {
-            color: white; /* Change text color */
+        
+        .btn.btn-primary.stretched-link {            
             background-color: #e6e6fa;
-            border-color: #28a745;
+            border-color: #e6e6fa;
         }
 
             
@@ -41,12 +38,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <ul class="nav-list">
+        <nav class="navbar" aria-label="Main navigation">            
+            <ul class="sidenav">
                 <li><a href="home.index.html">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="education.html">Education</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a class="active" href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="visitedcontenttracker.html">Progress</a></li>
             </ul>
@@ -57,33 +54,34 @@
             <img class="KRimage" src="KR.png" alt="Kaela Ramey logo" />
         </a>
         <br />
+        <h1>Projects</h1>
         <br />
         <div class="container">
             <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 g-3">
-                    <div class="col">
-                        <div class="card h-100 course-card variant-indigo">
-                            <a href="documentation.html" class="btn btn-primary stretched-link"></a>
-                            <div class="card-body">Documentation</div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100 course-card variant-indigo">
-                            <a href="scripts.html" class="btn btn-primary stretched-link"></a>
-                            <div class="card-body">Scripts</div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100 course-card variant-indigo">
-                            <a href="lab.html" class="btn btn-primary stretched-link"></a>
-                            <div class="card-body">Network Security Labs</div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100 course-card variant-indigo">
-                            <div class="card-body">Research and Data</div>
-                        </div>
+                <div class="col">
+                    <div class="card h-100 course-card variant-indigo">
+                        <a href="documentation.html" class="btn btn-primary stretched-link"></a>
+                        <div class="card-body">Documentation</div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="card h-100 course-card variant-indigo">
+                        <a href="scripts.html" class="btn btn-primary stretched-link"></a>
+                        <div class="card-body">Scripts</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 course-card variant-indigo">
+                        <a href="lab.html" class="btn btn-primary stretched-link"></a>
+                        <div class="card-body">Network Security Labs</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 course-card variant-indigo">
+                        <div class="card-body">Research and Data</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <br />
         <br />

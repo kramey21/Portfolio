@@ -1,14 +1,14 @@
-@WebServlet("/trackClick")
-public class ClickTrackerServlet extends HttpServlet {
-    private int clickCount = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-links');
 
-    @Override
-    protected synchronized void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws IOException {
-        clickCount++;
-        System.out.println("Link clicked " + clickCount + " times.");
-        resp.sendRedirect("https://example.com"); // Redirect to actual link
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+    } else {
+        console.error("Menu toggle or nav list element not found.");
     }
-}
+});
 
 
