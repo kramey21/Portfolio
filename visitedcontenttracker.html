@@ -6,33 +6,7 @@
     <title>Session Views Dashboard</title>
     <link rel="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     <link rel="stylesheet" href="variables.css">
-    <link rel="stylesheet" href="pstyles.css">
-    <script>function clickCounter() {
-        const x = document.getElementById("result");
-        if (typeof(Storage) !== "undefined") {
-          if (sessionStorage.clickcount) {
-        sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-        } else {
-        sessionStorage.clickcount = 1;
-        }
-        x.innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session!";
-        } else {
-        x.innerHTML = "Sorry, no Web storage support!";
-        }
-    }
-    function linkCounter() {
-        const x = document.getElementById("docLink");
-        if (typeof(Storage) !== "undefined") {
-            if (sessionStorage.clickcount) {
-        sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-        } else {
-        sessionStorage.clickcount = 1;
-        }
-        x.innerHTML = "You have clicked " + sessionStorage.clickcount + " link(s) in this session!";
-        } else {
-        x.innerHTML = "Sorry, no Web storage support!";
-        }
-    }</script>
+    <link rel="stylesheet" href="pstyles.css">    
     <style>
         .panel {
             max-width: 1200px;
@@ -41,21 +15,18 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             text-align: center;
         }
-
         .container {
             max-width: 600px;
             margin: auto;
         }
-
         .icon {
             font-size: 80px;
             margin-bottom: 20px;
         }
-    </style>
-    
+    </style>    
 </head>
 <body onload="linkCounter()">
-    <nav class="navbar" aria-label="Main navigation">       
+    <nav class="navbar" aria-label="Main navigation">
         <ul class="sidenav">
             <li><a href="home.index.html">Home</a></li>
             <li><a href="experience.html">Experience</a></li>
@@ -68,12 +39,11 @@
     <a href="home.index.html">
         <img class="KRimage" src="KR.png" alt="Kaela Ramey logo" />
     </a>
+     
+
     <h2>Session Views Dashboard</h2>
-    <button onclick="clickCounter()" type="button">Click me!</button>
-    <p id="result"></p>
-    <p>Click the button to see the counter increase.</p>
-    <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
-    <p id="docLink"></p>
+
+    
 
     <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
         <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9s-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12m-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4s1.2-.036 1.725-.098m4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257z" />
