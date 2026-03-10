@@ -17,30 +17,27 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             text-align: center;
         }
-
+        
         .container {
             max-width: 600px;
             margin: auto;
         }
-
+        
         .icon {
             font-size: 80px;
             margin-bottom: 20px;
         }
-    </style>
-    <script>function linkCounter() {
-    const x = document.getElementById("docLink");
-    if (typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-    sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-    } else {
-    sessionStorage.clickcount = 1;
-    }
-    x.innerHTML = "You have clicked " + sessionStorage.clickcount + " link(s) in this session!";
-    } else {
-    x.innerHTML = "Sorry, no Web storage support!";
-    }
-}</script>
+        .stretched-link {
+            border-top-color: white;
+        }
+        .btn.btn-primary.stretched-link {
+            color: white; /* Change text color */
+            background-color: #e6e6fa;
+            border-color: #28a745;
+        }
+
+            
+    </style>    
 </head>
 <body>
     <header>
@@ -62,7 +59,7 @@
         <br />
         <br />
         <div class="container">
-            <div class="row row-cols-2 row-cols-sm-1 row-cols-md-3 g-3">
+            <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 g-3">
                     <div class="col">
                         <div class="card h-100 course-card variant-indigo">
                             <a href="documentation.html" class="btn btn-primary stretched-link"></a>
@@ -83,7 +80,6 @@
                     </div>
                     <div class="col">
                         <div class="card h-100 course-card variant-indigo">
-                            <a href="scripts.html" class="btn btn-primary stretched-link"></a>
                             <div class="card-body">Research and Data</div>
                         </div>
                     </div>
