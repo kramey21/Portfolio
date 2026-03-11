@@ -16,16 +16,28 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             text-align: center;
         }
+
         .container {
             max-width: 600px;
             margin: auto;
         }
+
         .icon {
             font-size: 80px;
             margin-bottom: 20px;
         }
     </style>
-    
+    <script>
+        function clickCounter() {
+            if (sessionStorage.clickcount) {
+                sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+            } else {
+                sessionStorage.clickcount = 1;
+            }
+            document.getElementById("myDocs").innerHTML = sessionStorage.clickcount;
+        }
+    </script>
+
 </head>
 <body>
     <header>
@@ -57,7 +69,7 @@
                                     style="border:2px solid black; border-radius: 15px"
                                     title="Project Plan">
                             </iframe> 
-                            <a href="DocumentationProjectPlan.pdf" class="track-link" role="button" data-bs-toggle="button">Open Documentation Project Plan</a>
+                            <a href="DocumentationProjectPlan.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Documentation Project Plan</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +83,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Why Document">
                             </iframe>
-                            <a href="WhyDocument.pdf" class="btn" role="button" data-bs-toggle="button">Open Why Document Presentation</a>
+                            <a href="WhyDocument.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Why Document Presentation</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +97,9 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Documentation Audit.pdf">
                             </iframe>
-                            <a href="Documentation Audit.pdf" class="btn" role="button" data-bs-toggle="button">Open Documentation Audit</a>
+                            
+                            <a href="Documentation Audit.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Documentation Audit</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -99,7 +113,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Documentation Strategy.pdf">
                             </iframe>
-                            <a href="Documentation Strategy.pdf" class="btn" role="button" data-bs-toggle="button">Open Documentation Strategy</a>
+                            <a href="Documentation Strategy.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Documentation Strategy</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +127,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Why Document">
                             </iframe>
-                            <a href="Documentation Playbook.pdf" class="btn" role="button" data-bs-toggle="button">Open Documentation Playbook</a>
+                            <a href="Documentation Playbook.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Documentation Playbook</a>
                         </div>
                     </div>
                 </div>                

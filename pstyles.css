@@ -64,8 +64,6 @@ p {
     border-radius: 15px;
 }
 
-
-
 /*Navigation Menu*/
 ul.sidenav {
     list-style-type: none;
@@ -94,15 +92,11 @@ ul.sidenav li a:hover:not(.active) {
     background-color: #bf94e4;
     color: white;
 }
-
-
-
   ul.sidenav {
     width: 100%;
     height: auto;
     position: relative;
-  }
-  
+  }  
   ul.sidenav li a {
     float: left;
     padding: 15px;

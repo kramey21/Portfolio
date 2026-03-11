@@ -16,21 +16,31 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
             text-align: center;
         }
+
         .container {
             max-width: 600px;
             margin: auto;
         }
+
         .icon {
             font-size: 80px;
             margin-bottom: 20px;
         }
     </style>
-    
+    <script>function clickCounter() {
+         if (sessionStorage.clickcount) {
+             sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+         } else {
+             sessionStorage.clickcount = 1;
+         }
+         document.getElementById("myDocs").innerHTML = sessionStorage.clickcount;
+     }</script>
+
 </head>
 <body>
     <header>
-        <nav class="navbar" aria-label="Main navigation">
-            <ul class="nav-list">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <ul class="sidenav">
                 <li><a href="home.index.html">Home</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="education.html">Education</a></li>
@@ -57,7 +67,7 @@
                                     style="border:2px solid black; border-radius: 15px"
                                     title="Project Plan">
                             </iframe>
-                            <a href="labs\Assignment 1 Building a Firewall.pdf" class="btn" role="button" data-bs-toggle="button">Open Building a Firewall</a>
+                            <a href="labs\Assignment 1 Building a Firewall.pdf" class="btn" role="button" data-bs-toggle="button" id="myDocs" onclick="clickCounter()">Open Building a Firewall</a>
                         </div>
                     </div>
                 </div>
@@ -71,21 +81,21 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="certscript.ps1">
                             </iframe>
-                            <a href="labs\Assignemnt 3 Microsoft Deployment Toolkit.pdf" class="btn" role="button" data-bs-toggle="button">Open Microsoft Deployment Toolkit</a>
+                            <a href="labs\Assignemnt 3 Microsoft Deployment Toolkit.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Microsoft Deployment Toolkit</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100 course-card variant-indigo">
                         <div class="card-body">
-                            <h2>Microsoft Deployment Toolkit</h2>
+                            <h2>Active Directory</h2>
                             <iframe src="labs\Assignment 4 Active Directory.pdf"
                                     width="1000"
                                     height="300"
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Network Status Script">
                             </iframe>
-                            <a href="labs\Assignment 4 Active Directory.pdf" class="btn" role="button" data-bs-toggle="button">Open Active Directory</a>
+                            <a href="labs\Assignment 4 Active Directory.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Active Directory</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +109,7 @@
                                     style="border:2px solid black; border-radius: 15px;"
                                     title="Network Status Script">
                             </iframe>
-                            <a href="labs\Assignment 5 Certificate Authority.pdf" class="btn" role="button" data-bs-toggle="button">Open Certificate Authority</a>
+                            <a href="labs\Assignment 5 Certificate Authority.pdf" class="btn" role="button" data-bs-toggle="button" onclick="clickCounter()">Open Certificate Authority</a>
                         </div>
                     </div>
                 </div>
@@ -107,14 +117,6 @@
         </div>
     </main>
     <br />
-    <br />
-    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
-        <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9s-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12m-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4s1.2-.036 1.725-.098m4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257z" />
-    </svg>
-    <i class="bi bi-cone-striped"></i>
-    <div class="container">
-        <h1>Under construction!</h1>
-        <h4>I'm working hard to bring you something amazing. Stay tuned!</h4>
-    </div>
+    <br />    
 </body>
 </html>
